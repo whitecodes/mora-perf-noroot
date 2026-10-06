@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_open_menu">打开导航</string>
+    <string name="destination_home">主页</string>
+    <string name="destination_profiles">情景模式</string>
+    <string name="destination_games">游戏</string>
+    <string name="destination_led">灯光</string>
+    <string name="destination_settings">设置</string>
+    <string name="placeholder_pending">此页面尚未实现。</string>
+    <string name="connection_loading">正在连接本地守护进程…</string>
+    <string name="token_entry_title">连接守护进程</string>
+    <string name="token_entry_body">本应用通过 127.0.0.1:1004 的本地接口与 mora-perf-daemon 通信。请输入 daemon 配置中的 api_token 以继续。令牌会保存在本机，下次启动时自动复用。</string>
+    <string name="token_field_label">API 令牌</string>
+    <string name="action_show_token">显示令牌</string>
+    <string name="action_hide_token">隐藏令牌</string>
+    <string name="action_connect">连接</string>
+    <string name="action_retry">重试</string>
+    <string name="action_change_token">更换令牌</string>
+    <string name="error_connect_title">无法连接守护进程</string>
+    <string name="error_connect_body">daemon 未运行，或未接受该 API 令牌。daemon 对这两种情况返回相同的结果、无法区分，请确认 mora-perf-daemon 正在运行，必要时重新输入令牌。</string>
+    <string name="error_detail">详细信息：%1$s</string>
+</resources>

@@ -1,3 +1,22 @@
 <resources>
-    <string name="app_name">mora-perf</string>
+    <string name="app_name" translatable="false">mora-perf</string>
+    <string name="action_open_menu">Open navigation</string>
+    <string name="destination_home">Home</string>
+    <string name="destination_profiles">Profiles</string>
+    <string name="destination_games">Games</string>
+    <string name="destination_led">LED</string>
+    <string name="destination_settings">Settings</string>
+    <string name="placeholder_pending">This screen is not implemented yet.</string>
+    <string name="connection_loading">Contacting the local daemon…</string>
+    <string name="token_entry_title">Connect to the daemon</string>
+    <string name="token_entry_body">This app talks to mora-perf-daemon over the loopback API at 127.0.0.1:1004. Enter the api_token from the daemon configuration to continue. The token is stored on this device and reused next time.</string>
+    <string name="token_field_label">API token</string>
+    <string name="action_show_token">Show token</string>
+    <string name="action_hide_token">Hide token</string>
+    <string name="action_connect">Connect</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_change_token">Use a different token</string>
+    <string name="error_connect_title">Cannot reach the daemon</string>
+    <string name="error_connect_body">The daemon is not running, or it did not accept the API token. It answers both cases the same way, so make sure mora-perf-daemon is running and re-enter the token if needed.</string>
+    <string name="error_detail">Details: %1$s</string>
 </resources>
