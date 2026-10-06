@@ -28,9 +28,9 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
-      # app/build.gradle.kts compiles against android-37.1
-      - name: Install Android platform 37.1
-        run: sdkmanager "platforms;android-37.1"
+      # app/build.gradle.kts compiles against android-36
+      - name: Install Android platform 36
+        run: sdkmanager "platforms;android-36"
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4

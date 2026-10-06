@@ -13,11 +13,7 @@ val props = Properties().apply { load(FileInputStream(rootProject.file("keystore
 
 android {
     namespace = "com.wille.moraPerf"
-    compileSdk {
-        version = release(37) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.wille.moraPerf"
