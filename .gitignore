@@ -9,3 +9,7 @@
 .cxx
 local.properties
 /AGENTS.md
+
+# Release signing
+/app/release.jks
+keystore.properties

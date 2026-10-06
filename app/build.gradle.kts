@@ -1,7 +1,15 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
 }
+
+// --- Release signing ---
+// keystore.properties is expected to exist locally (gitignored).
+// On CI, it's created by a workflow step before the build.
+val props = Properties().apply { load(FileInputStream(rootProject.file("keystore.properties"))) }
 
 android {
     namespace = "com.wille.moraPerf"
@@ -21,6 +29,17 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = rootProject.file("app/" + props.getProperty("storeFile").trim())
+            storePassword = props.getProperty("storePassword").trim()
+            keyPassword = props.getProperty("keyPassword").trim()
+            keyAlias = props.getProperty("keyAlias").trim()
+            enableV1Signing = true
+            enableV2Signing = true
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -28,6 +47,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {
