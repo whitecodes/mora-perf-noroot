@@ -25,12 +25,11 @@ jobs:
           java-version: "21"
           distribution: "temurin"
 
+      # v4 is required: v3 defaults to installing the retired "tools" package
+      # and fails. v4 also accepts SDK licenses by default, and the runner
+      # image already ships platform 36 and matching build-tools.
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
-      # app/build.gradle.kts compiles against android-36
-      - name: Install Android platform 36
-        run: sdkmanager "platforms;android-36"
+        uses: android-actions/setup-android@v4
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4

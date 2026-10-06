@@ -7,7 +7,7 @@ All notable changes to this project are documented in this file.
 ### Added
 
 - GitHub Actions CI workflow that runs unit tests, builds the debug and release APKs, and uploads them as artifacts
-  - Installs Android platform 36 to match the project's `compileSdk`
+  - Sets up the SDK with `android-actions/setup-android@v4`, relying on the platform 36 and build-tools that the runner image already provides
 - Release signing support driven by `keystore.properties`, which CI reconstructs from repository secrets on push
 
 ### Changed
